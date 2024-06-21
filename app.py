@@ -56,11 +56,13 @@ def add_item():
     item_name = data["name"]
     print("List no.-",list_num)
     
+    usrId = session["user_id"]
+    
     # new lines
     db = get_db()
     cursor = db.cursor()
     # fin
-    cursor.execute("INSERT INTO lists (list_id, item) VALUES (?,?)", (list_num, item_name))
+    cursor.execute("INSERT INTO lists (user_id, list_id, item) VALUES (?,?,?)", (usrId,list_num,item_name))
     db.commit() # this too
     print('Inserted- ',item_name) 
     return jsonify({'message':'Item created successfully'}), 201
@@ -75,11 +77,13 @@ def remove_item():
         list_num = data["list_num"]
         print("List no.-",list_num)
         
+        usrId = session["user_id"]
+        
         # new lines
         db = get_db()
         cursor = db.cursor()
         # fin
-        cursor.execute("DELETE FROM lists WHERE list_id = ? AND item = ?", (list_num, item_name))
+        cursor.execute("DELETE FROM lists WHERE user_id = ? AND list_id = ? AND item = ?", (usrId,list_num,item_name))
         db.commit() # this too
     except sqlite3.DatabaseError as e:
         return jsonify({"error": str(e)}), 500
@@ -98,10 +102,12 @@ def add_table():
     list_id = data['list_num']
     list_name = data['lstName']
     
+    usrId = session["user_id"]
+    
     try:
         db = get_db()
         cursor = db.cursor()
-        cursor.execute("INSERT INTO aliases (list_id,list_name) VALUES (?,?)", (list_id,list_name))
+        cursor.execute("INSERT INTO aliases (user_id,list_id,list_name) VALUES (?,?,?)", (usrId,list_id,list_name))
         db.commit()
         
     except sqlite3.DatabaseError as e:
@@ -237,12 +243,12 @@ def register():
 
         hash_pwd = generate_password_hash(pwd)
         if hash_pwd:
-            new_user = cursor.execute("INSERT INTO users (username, hash) VALUES (?,?)", (username, hash_pwd))
-        
-        cursor.close()
-        session["user_id"] = new_user  # to create a new session with this user
+            cursor.execute("INSERT INTO users (username, hash) VALUES (?,?)", (username, hash_pwd))
+            new_user = cursor.lastrowid  # get the last inserted row's ID
         
         db.commit()
+        cursor.close()
+        session["user_id"] = new_user  # to create a new session with this user
         
     return redirect("/")
 

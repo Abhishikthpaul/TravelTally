@@ -151,6 +151,10 @@ p {
 }
 
 
+#staticBackdropLabel {
+    color: #eeeeee;
+}
+
 .list
 {
     background-color: #647e68;
