@@ -95,7 +95,7 @@ There are main files pertaining to the program-
 
 ## Acknowledgements
 
-- This project was done as a part of the CS50x course
+- This project was done as a part of the CS50x course.
 - Many thanks to Prof. David Jay Malan who taught the course so well!
 
 ## Contact
