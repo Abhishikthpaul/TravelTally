@@ -46,18 +46,21 @@ A website that can make lists by dragging and dropping items, and save them for 
   <figure>
     <img src="Screenshots/register.png" alt="Register"/>
     <figcaption style="text-align:center;">Fig.1 - Register</figcaption>
+    <br>
   </figure>
-  <br>
+  
   <figure>
     <img src="Screenshots/error.png" alt="Error"/>
     <figcaption style="text-align:center;">Fig.2 - Error</figcaption>
+    <br>
   </figure>
-  <br>
+  
   <figure>
     <img src="Screenshots/dragndrop.png" alt="Drag and drop"/>
     <figcaption style="text-align:center;">Fig.3 - Drag and drop</figcaption>
+    <br>
   </figure>
-  <br>
+  
   <figure>
     <img src="Screenshots/print_list.png" alt="Print"/>
     <figcaption style="text-align:center;">Fig.4 - Print preview</figcaption>
