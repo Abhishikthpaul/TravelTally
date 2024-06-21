@@ -18,6 +18,8 @@ A website that can make lists by dragging and dropping items, and save them for 
 
 ## Introduction
 
+This web application allows you to make a travel checklist, which consists of a list of items you want to carry on a trip. You can do so by simply dragging and dropping items from a sidebar. Once you’re finished with your list, you can save it for future use. Additionally you have the option to print the list or save it as a PDF if you prefer a physical copy.
+
 ## Technologies Used
 
 - Python - version 3.11.2
@@ -81,11 +83,12 @@ There are \_ main files pertaining to the program-
 
 ## Design Choices
 
--
+- I chose SQLite as database for this project due to its simplicity and popularity for small-scale applications. A bit of research provided me with the necessary knowledge to manage the database, including opening and closing the connection, inserting and deleting records etc.
+- Initially I wrote most of the JavaScript in plain, vanilla JS. However, after discovering jQuery and its ease of use, I began incorporating it into my script.
 
 ## Acknowledgements
 
-- This project was done as a part of CS50x course
+- This project was done as a part of the CS50x course
 - Many thanks to Prof. David Jay Malan who taught the course so well!
 
 ## Contact
