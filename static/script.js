@@ -1,4 +1,3 @@
-// ? before adding (correcting) Edit Previous List functionality
 
 document.addEventListener("DOMContentLoaded", function()
 {

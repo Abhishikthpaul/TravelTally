@@ -77,9 +77,16 @@ Run the program by **cd**-ing into the directory and typing `flask run`
 
 ## Make-up of Program
 
-There are \_ main files pertaining to the program-
+There are main files pertaining to the program-
 
-1. The `app.py` is
+1. `index.html` : The main homepage template for rendering the app's front-end.
+2. `styles.css` : The primary CSS file for styling the app's user interface. 
+3. `script.js` : JavaScript file for managing front-end logic, event listeners, and dynamic functionality.
+4. `app.py` : The main Flask application file handling routing, backend logic, and interactions with the database.
+5. `helpers.py` : Module containing auxiliary functions to support the main logic in *app.py*.
+6. `project.db` : SQLite database storing all the application's data.
+
+
 
 ## Design Choices
 
