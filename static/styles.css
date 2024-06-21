@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #111827;
+    /* 222831 */
+    color: #eeeeee;
+    max-height: 100vh;
+}
+
+.App
+{
+    display: flex;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: large;
+}
+
+.navbar{
+    padding-top: 2px;
+    padding-left: 23px;
+    background-color: #111827;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.25);
+    
+}
+
+.navbar-brand {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+}
+
+.navbar-brand img {
+    padding-top: 3px;
+    vertical-align: middle;
+}
+
+#color {
+    color: #D5A18E;
+    /* B4A6AB */
+}
+
+.sidebar
+{
+    display: flex;
+
+    background-color: #111827;
+    /* 222831 */
+    /* #31363f */
+    /* #3b414e */
+    flex: 1.5;
+    /* margin-top: 5px; */
+    /* margin-right: 10px; */
+    margin-left: 10px;
+
+    padding: 20px;
+
+    /* to make sidebar scrollable */
+    overflow-y: auto;
+    /* top: 0;
+    bottom: 0; */
+
+    /* to arrange child elements vertically */
+    flex-direction: column;
+    align-items: center;
+}
+
+#add-new-btn {
+    top: 50px;
+    width: 85px;
+    height: 30px;
+    /* background-color: #1b1f22; */
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: medium;
+    font-weight: normal;
+}
+
+.main
+{
+    background-color: #1D2734;
+    /* 31363f */
+    /* 96939B */
+    border-radius: 25px;
+    border: 1px solid #28313d;
+
+    flex: 3;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+
+    padding: 20px;
+    padding-left: 70px;
+
+    /* to align in the right */
+    position: relative;
+
+    /* make scrollable and height not extend below the bottom of screen*/
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+#drop_zone
+{
+    /* border-right: 1px solid whitesmoke; */
+    width: 260px;
+    height: 100vh;
+}
+
+.btn
+{
+    width: 60px;
+    font-size:medium;
+}
+
+#save-btn
+{
+    /* to align in the right. also position: relative in .main*/
+    position: absolute;
+    top: 30px;
+    right: 110px;
+}
+
+#save-btn:disabled
+{
+    background-color: #ccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+#delete-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+
+#print-btn {
+    position: absolute;
+    top: 90px;
+    right: 70px;
+}
+
+
+.list
+{
+    background-color: #647e68;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: large;
+    height: 60px;
+    width: 255px;
+    margin-bottom: 2px;
+
+    padding: 10px;
+    cursor: grab;
+
+    /* both of these are required to vertically align the img and text */
+    display: flex;
+    align-items: center;
+}
+
+.list img
+{
+    width: 36px;
+    margin-right: 20px;
+    margin-left: 9px;
+}
+
+
+#new-list-btn
+{
+    top: 80px;
+    width: 150px;
+    height: 35px;
+    /* background-color: #1b1f22; */
+    margin-bottom: 30px;
+}
+
+.modal-title, .modal-body
+{
+    color: #000;
+}
+
+.right_sidebar
+{
+    background-color: #111827;
+    /* 3b414e */
+    flex: 1;
+    margin-top: 20px;
+    
+    padding: 20px;
+
+    display: flex;
+    justify-content: start;
+    /* to arrange child elements vertically, one below the other */
+    flex-direction: column;
+    align-items: center;
+}
+
+.name
+{
+    display: flex;
+
+    background-color: #222831;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: large;
+
+    justify-content: center;
+    align-items: center;
+    
+    color: #eeeeee;
+    border: 1.5px solid #647e68;
+    border-radius: 15px;
+
+    height: 40px;
+    width: 190px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+}
+
+.name:hover {
+    background-color: #2e3030;
+    /* 1f262a */
+}
+
+/* .print-only{
+    display: none;
+} */
+
+/* --------------------------------------------------- */
+
+.users {
+    width: 70px;
+}
+
+.nav-link {
+    font-size:medium;
+}
+
+.alert {
+    text-align: center;
+    font-size: medium;
+}

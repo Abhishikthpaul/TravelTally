@@ -1,0 +1,2 @@
+DELETE FROM lists;
+DELETE FROM aliases;

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+    <div class="App">
+        <div class="sidebar">
+            <!--Add new item btn-->
+            <button id="add-new-btn" class="btn btn-light">Add Item</button>
+
+        </div> 
+
+        <div class="main">               
+            <p>(drop here)<p>
+            <div id="drop_zone">
+                
+            </div>
+            
+            <button id="save-btn" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Save</button>
+            <button id="delete-btn" class="btn btn-outline-danger" type="button">Delete</button>
+            <!--Print button-->
+            <button id="print-btn" class="btn btn-light" onclick="printDiv('drop_zone')">Print</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">List Name</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form>
+                            <div class="mb-3">
+                                <input class="form-control form-control-lg" autocomplete=off type="text" id="list-name" name="list-name" placeholder="Untitled">
+                                <br>
+                                <button type="button" id="list-saved" class="btn btn-primary">Save</button> <!--close modal, call flask route-->
+                            </div>
+                        </form>
+
+                    </div>
+        
+                </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="right_sidebar">
+            <button id="new-list-btn" class="btn btn-light" disabled>New List</button>
+        </div>
+    </div>
+
+
+    <!-- link to external js file -->
+    <script src="/static/script.js">
+    </script>
+{% endblock %}
