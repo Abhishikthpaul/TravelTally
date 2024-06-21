@@ -16,8 +16,14 @@ A website that can make lists by dragging and dropping items, and save them for 
 ## Introduction
 
 ## Technologies Used
-- Python
-- fd
+- Python - version 3.11.2
+- Flask
+- SQLite db (sqlite3)
+- HTML, CSS, Javascript
+- JQuery (little bit)
+- Jinja
+- Bootstrap
+
 
 ## Features
 - You can drag and drop items to make your list, and you can remove items by dragging them back to the sidebar.
@@ -41,13 +47,9 @@ Run the program by **cd**-ing into the directory and typing `python project.py`
 
 
 ## Make-up of Program
-There are three main files pertaining to the program-
+There are _ main files pertaining to the program-
 
-1. The `project.py` is the main program containing functions such as *display()* and *quiz()*
-
-2. `test_project.py` is used for testing the important functions of the main program such as *time_diff()*, *check()* and *right_ans()* 
-
-3. In the `country_times.csv`, the countries and their time differences are stored as a list of dictionaries
+1. The `app.py` is 
 
 
 ## Design Choices
@@ -63,7 +65,7 @@ There are three main files pertaining to the program-
 ## Contact
 Created by Abhishikth Paul - abhishikthpaul@gmail.com
 
-Project link: https://github.com/Abhishikthpaul/TimeZoneTeacher.git
+Project link: https://github.com/Abhishikthpaul/TravelTally.git
 
 
 <!-- ## License -->
