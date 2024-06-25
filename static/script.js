@@ -185,76 +185,6 @@ document.addEventListener("DOMContentLoaded", function()
     }
 
 
-    // ========================= Print functionality ========================= //
-
-    function printDiv(divName) {
-        let printContents = [];
-        let list_title = "List";
-
-        // change list title if list is saved with a name
-        // if ($('#list-saved').hasClass("listSaved"))  // in vanilla JS, we would use .classList.contains("listSaved")
-        // {
-            // let name = $('#list-name').val();
-        //     console.log(name);
-        // }
-
-        const items = document.getElementById(divName).childNodes;
-        items.forEach(item => {
-            if (item && item.textContent.trim()!== "") {
-                printContents.push(item.textContent.trim());
-            }
-        });
-
-        console.log(printContents);
-
-        let w = window.open();
-        w.document.write(`
-            <html>
-                <head>
-                    <style>
-                        h1{
-                            margin-top: 2cm;
-                            margin-bottom: 20px;
-                        }
-
-                        body{
-                            margin-left: 2cm;
-
-                            display: block;
-
-                            font-size: 20px;
-                            font-family: Arial, sans-serif;
-                        }
-
-                        .print-item{
-                            margin-bottom: 10px
-                        }
-
-                        @page {
-                            margin: 0;   
-                            size: A4;      
-                        }
-
-                        input[type="checkbox"]{
-                            margin-right: 15px;
-                            transform: scale(1.5); /* Make checkbox bigger */
-                        }
-                    </style>
-                </head>
-                <body>
-        `);
-        w.document.writeln("<h1>" + list_title + "</h1>");
-        printContents.forEach(content => {
-            w.document.write(`<div class="print-item"><input type="checkbox">${content}</div>`);
-        });
-        w.document.writeln(`
-                </body>
-            </html>
-        `);
-        w.document.close();
-        w.print();
-        w.close();
-    }
 
 
 
@@ -399,6 +329,76 @@ document.addEventListener("DOMContentLoaded", function()
 
 
 
+    // ========================= Print functionality ========================= //
+
+    function printDiv(divName) {
+        let printContents = [];
+        let list_title = "List";
+
+        // change list title if list is saved with a name
+        // if ($('#list-saved').hasClass("listSaved"))  // in vanilla JS, we would use .classList.contains("listSaved")
+        // {
+            // let name = $('#list-name').val();
+        //     console.log(name);
+        // }
+
+        const items = document.getElementById(divName).childNodes;
+        items.forEach(item => {
+            if (item && item.textContent.trim()!== "") {
+                printContents.push(item.textContent.trim());
+            }
+        });
+
+        console.log(printContents);
+
+        let w = window.open();
+        w.document.write(`
+            <html>
+                <head>
+                    <style>
+                        h1{
+                            margin-top: 2cm;
+                            margin-bottom: 20px;
+                        }
+
+                        body{
+                            margin-left: 2cm;
+
+                            display: block;
+
+                            font-size: 20px;
+                            font-family: Arial, sans-serif;
+                        }
+
+                        .print-item{
+                            margin-bottom: 10px
+                        }
+
+                        @page {
+                            margin: 0;   
+                            size: A4;      
+                        }
+
+                        input[type="checkbox"]{
+                            margin-right: 15px;
+                            transform: scale(1.5); /* Make checkbox bigger */
+                        }
+                    </style>
+                </head>
+                <body>
+        `);
+        w.document.writeln("<h1>" + list_title + "</h1>");
+        printContents.forEach(content => {
+            w.document.write(`<div class="print-item"><input type="checkbox">${content}</div>`);
+        });
+        w.document.writeln(`
+                </body>
+            </html>
+        `);
+        w.document.close();
+        w.print();
+        w.close();
+    }
 
 
 
